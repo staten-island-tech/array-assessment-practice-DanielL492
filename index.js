@@ -92,7 +92,9 @@ console.log(findarray);
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
 
-const orderbydate = books.filter((books) => books.publishDate);
+const orderbydate = books.filter((books) => function(num) {
+  
+  books.publishDate});
 orderbydate.sort();
 console.log(orderbydate);
 
