@@ -84,14 +84,29 @@ const titles = [
   "Little Women",
 ];
 
+const findarray = books.forEach((books) => console.log(books.authorFirst + " " + books.authorLast + 
+  " wrote " + books.name + " in " + books.publishDate));
+
+console.log(findarray);
+
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
+
+const orderbydate = books.filter((books) => books.publishDate);
+orderbydate.sort();
+console.log(orderbydate);
 
 //Sort books from oldest to most recent
 
 //sort books alphabetically
 
+const mysauthor = books.filter((find) => find.name === "War and Peace");
+console.log(mysauthor.books.authorFirst + mysauthor.books.authorLast + " wrote War and Peace.");
+
 //Find who wrote War and Peace
+
+const howmany = books.filter((find) => find.publishDate < 1900);
+console.log(howmany.length + " books were written before 1900.");
 
 //how many books were written before 1900?
 
