@@ -31,21 +31,21 @@ const books = [
     name: "Ulysses",
     authorFirst: "James",
     authorLast: "Joyce",
-    publishDate: 1918,
+    publishDate: 1918,  //1918
     genre: ["historical", "non-fiction"],
   },
   {
     name: "War and Peace",
     authorFirst: "Leo",
     authorLast: "Tolstoy",
-    publishDate: 1867,
+    publishDate: 1867,  //1867
     genre: ["historical", "fiction"],
   },
   {
     name: "Pride and Prejudice",
     authorFirst: "Jane",
     authorLast: "Austen",
-    publishDate: 1813,
+    publishDate: 1813,  //1813
     genre: ["fiction"],
   },
   {
@@ -59,14 +59,14 @@ const books = [
     name: "Great Expectations",
     authorFirst: "Charles",
     authorLast: "Dickens",
-    publishDate: 1861,
+    publishDate: 1861, //1861
     genre: ["historical", "fiction"],
   },
   {
     name: "Little Women",
     authorFirst: "Lousia May",
     authorLast: "Alcott",
-    publishDate: 1868,
+    publishDate: 1868, //1868
     genre: ["womens", "historical", "fiction"],
   },
 ];
@@ -84,29 +84,44 @@ const titles = [
   "Little Women",
 ];
 
+//FINISHED?
 const findarray = books.forEach((books) => console.log(books.authorFirst + " " + books.authorLast + 
   " wrote " + books.name + " in " + books.publishDate));
+
+//const makearray = books.filter(())
 
 console.log(findarray);
 
 //Array of authors and the book they wrote
 //"--- wrote --- in ---"
 
-const orderbydate = books.filter((books) => function(num) {
-  
-  books.publishDate});
+/*const orderbydate = books.filter((books) => books.publishDate);
 orderbydate.sort();
-console.log(orderbydate);
+console.log(orderbydate);*/
+
+function sortbydate(a, b) {
+  return a - b;
+}
+const sortedbook = books.sort((books) => sortbydate(books.publishDate - books.publishDate));
+console.log(sortedbook);
 
 //Sort books from oldest to most recent
 
+//FINISHED
+titles.sort();
+const sortedbooks = titles.forEach((book) => console.log(book));
+//replace ^^  with  "console.log(titles);" if you want to keep it as an array
+
 //sort books alphabetically
 
+//FINISHED
 const mysauthor = books.filter((find) => find.name === "War and Peace");
-console.log(mysauthor.books.authorFirst + mysauthor.books.authorLast + " wrote War and Peace.");
+
+const authname = mysauthor.forEach((author) => console.log(author.authorFirst + " " + author.authorLast + " wrote War and Peace."))
 
 //Find who wrote War and Peace
 
+//FINISHED
 const howmany = books.filter((find) => find.publishDate < 1900);
 console.log(howmany.length + " books were written before 1900.");
 
@@ -114,6 +129,25 @@ console.log(howmany.length + " books were written before 1900.");
 
 //was there at least one book published within the last 100 years?
 
+/*const date = new Date().getFullYear();
+
+function finddate() {
+  if (books.forEach((books) => ((date - books.publishDate) < 100))) {
+    console.log('true');
+  }
+  else 
+  {
+    console.log('false');
+  }
+}
+
+finddate();*/
+
 //was every book published within the last 100 years?
+
+//FINISHED
+const checkif = books.filter((books) => books.genre.includes("historical"));
+
+const makelist = checkif.forEach((checkif) => console.log(checkif.name + " has a historical genre."))
 
 //print a list of books that "includes" the genre historical
