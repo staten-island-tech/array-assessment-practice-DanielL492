@@ -1,4 +1,4 @@
-const books = [
+/*const books = [
   {
     name: "To Kill a Mockingbird",
     authorFirst: "Harper",
@@ -150,4 +150,4 @@ const checkif = books.filter((books) => books.genre.includes("historical"));
 
 const makelist = checkif.forEach((checkif) => console.log(checkif.name + " has a historical genre."))
 
-//print a list of books that "includes" the genre historical
+//print a list of books that "includes" the genre historical*/
